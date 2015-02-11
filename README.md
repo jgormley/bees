@@ -8,3 +8,5 @@ DEBUG=beekeeper:* ./bin/www
 ```
 
 Then go to http://localhost:3000
+
+blargh
