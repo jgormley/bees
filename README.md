@@ -4,10 +4,10 @@ bees, I keep them
 A simple node ws layer to mock service calls that are then consumed by an ember front-end
 ```sh
 npm install
-DEBUG=beekeeper:* ./bin/www
+node server.js
 ```
 
-Then go to http://localhost:3000
+Then go to http://localhost:8080
 
 notes to self:
 when changing code in openshift, run this to keep the githup repo in sync
