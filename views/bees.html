@@ -50,19 +50,37 @@
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Export</a></li>
+            <li><a href="#">blah</a></li>
           </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">History</a></li>
-            <li><a href="">Cache</a></li>
+          
+          Saved Queries:
+          <ul id="query-list" class="nav nav-sidebar">
+            {{#each query in model}}
+              <li>
+                <a href="" {{action 'loadQuery' query}}>{{query.name}}</a>
+              </li>
+            {{/each}}
           </ul>
+          
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Dashboard</h1>
-
-          <h2 class="sub-header">Section title</h2>
+          <h2 class="sub-header">Query</h2>
+          
+          <form>
+          <div>
+            <span>Name: </span>
+            <span id="queryName">{{queryName}}</span>
+          </div>
+          <div>
+            <textarea id="queryText" rows="10" cols="75">The query will go here</textarea>
+          </div>
+          <button type="button" {{action 'runQuery'}} class="btn btn-lg btn-success">Run Query</button>
+          <button type="button" {{action 'saveQuery'}} class="btn btn-lg btn-info">Save Query</button>
+          <button type="button" {{action 'clearQuery'}} class="btn btn-lg btn-link">Clear</button>
+          
+          </form>
+          
+          <h2 class="sub-header">Results</h2>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
@@ -211,5 +229,6 @@
     <script src="javascripts/application.js"></script>
     <script src="javascripts/router.js"></script>
     <script src="javascripts/models/query.js"></script>
+    <script src="javascripts/controllers/bees-controller.js"></script>
   </body>
 </html>

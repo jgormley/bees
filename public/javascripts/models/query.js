@@ -1,7 +1,7 @@
 
 
 Bees.Query = DS.Model.extend({
-  title: DS.attr('string'),
+  name: DS.attr('string'),
 	query: DS.attr('string'),
   isCompleted: DS.attr('boolean')
 });
@@ -10,19 +10,19 @@ Bees.Query = DS.Model.extend({
 Bees.Query.FIXTURES = [
  {
    id: 1,
-   title: 'My first query',
+   name: 'My first query of users',
    query: 'SELECT * FROM users;',
    isCompleted: true
  },
  {
    id: 2,
-   title: 'Another query',
+   name: 'Another query',
    query: 'SELECT * FROM query;',
    isCompleted: false
  },
  {
    id: 3,
-   title: 'The third query is the best',
+   name: 'The third query is the bank',
    query: 'SELECT * FROM banks;',
    isCompleted: false
  }

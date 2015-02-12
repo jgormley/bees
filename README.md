@@ -9,5 +9,13 @@ DEBUG=beekeeper:* ./bin/www
 
 Then go to http://localhost:3000
 
-blargh
-blargh again
+notes to self:
+when changing code in openshift, run this to keep the githup repo in sync
+```
+git push all
+```
+
+if somebody else updates the bees github repo, run this
+```
+git pull backup master
+```
