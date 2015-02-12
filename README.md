@@ -12,7 +12,7 @@ Then go to http://localhost:3000
 notes to self:
 when changing code in openshift, run this to keep the githup repo in sync
 ```
-git push all
+git push backup master
 ```
 
 if somebody else updates the bees github repo, run this
